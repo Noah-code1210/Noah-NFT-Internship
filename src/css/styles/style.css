@@ -16714,3 +16714,73 @@ img {
 .no-cursor {
   cursor: not-allowed;
 }
+
+.col-lg-3 {
+  width: 100%;
+  max-width: 400px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black !important;
+  font-size: 30px !important;
+}
+
+.skeleton__wrapper {
+  display: flex;
+}
+
+.nft__coll--skeleton {
+  width: 100%;
+  max-width: 290px;
+  height: 309px;
+  margin: 0 18px;
+  border: 1px solid darkgray;
+  border-radius: 10px;
+  background-color: white;
+  position: relative;
+}
+
+.nft__wrap--skeleton {
+  width: 100%;
+  max-width: 290px;
+  height: 206px;
+  border-radius: 10px;
+  background-color: white;
+  overflow: hidden;
+}
+
+.nft__wrap--img--skeleton {
+  width: 100%;
+  max-width: 290px;
+  height: 166px;
+  background-color: darkgray;
+
+}
+
+.nft__coll--pp--skeleton {
+  width: 50px;
+  height: 50px;
+  border-radius: 500px;
+  background-color: darkgray;
+  position: absolute;
+  bottom: 75px;
+  left: 120px;
+}
+
+.nft__coll--name--skeleton {
+  width: 110px;
+  height: 14px;
+  background-color: darkgray;
+  position: absolute;
+  bottom: 40px;
+  left: 88px;
+}
+.nft__coll--code--skeleton {
+  width: 80px;
+  height: 14px;
+  background-color: darkgray;
+  position: absolute;
+  bottom: 18px;
+  left: 102px;
+}
