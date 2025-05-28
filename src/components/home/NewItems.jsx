@@ -8,7 +8,15 @@ import Slider from "react-slick";
 const NewItems = () => {
   const [post, setPost] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [tick, setTick] = useState(0)
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTick((prev) => prev + 1)
+    }, 1000)
+    return () => clearInterval(interval)
+  }, [])
+ 
 
   useEffect(() => {
     async function fetchPost() {
@@ -32,7 +40,13 @@ const NewItems = () => {
     slidesToScroll: 1,
   };
 
-  function startTimer() {
+  const getCountdown = (expiry) => {
+    const diff = expiry - Date.now();
+    if (diff <= 0) return "00:00:00";
+    const h = String(Math.floor(diff  / 3600000)).padStart(2, "0")
+    const m = String(Math.floor((diff  % 3600000) / 60000)).padStart(2, "0")
+    const s = String(Math.floor((diff  % 60000) / 1000)).padStart(2, "0")
+    return `${h}h ${m}m ${s}s`
   }
   return (
     <section id="section-items" className="no-bottom">
@@ -77,8 +91,8 @@ const NewItems = () => {
                           <i className="fa fa-check"></i>
                         </Link>
                       </div>
-                      <div className="de_countdown">{posts.expiryDate}</div>
-                      
+                      <div className="de_countdown">{getCountdown(posts.expiryDate)}</div>
+
                       <div className="nft__item_wrap">
                         <div className="nft__item_extra">
                           <div className="nft__item_buttons">
