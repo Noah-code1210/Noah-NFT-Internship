@@ -54,7 +54,7 @@ const HotCollections = () => {
             <>
               <Slider {...settings}>
                 {post.map((posts) => (
-                  <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                  <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12" key={posts.id}>
                     <div className="nft_coll">
                       <div className="nft_wrap">
                         <Link to="/item-details">

@@ -23,7 +23,6 @@ const NewItems = () => {
       const { data } = await axios.get(
         `https://us-central1-nft-cloud-functions.cloudfunctions.net/newItems`
       );
-      console.log(data);
       setPost(data);
       setTimeout(() => {
         setLoading(false);
@@ -62,7 +61,7 @@ const NewItems = () => {
             {post.map((posts) => (
               <>
                 {loading ? (
-                  <div className="skeleton">
+                  <div className="skeleton" key={posts.id}>
                     <div className="item__wrap--skeleton">
                       <div className="pfp__skeleton">
                         <i className="fa fa-check"></i>
