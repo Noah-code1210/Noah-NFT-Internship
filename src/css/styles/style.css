@@ -15145,7 +15145,7 @@ a.btn-slider:hover {
   margin: 0 6px;
   display: inline-block;
   zoom: 1;
-  *display: inline;
+  display: inline;
 }
 
 .testi-slider .flex-control-paging li a {
@@ -16783,4 +16783,87 @@ img {
   position: absolute;
   bottom: 18px;
   left: 102px;
+}
+
+.skeleton {
+  width: 100%;
+  max-width: 290px;
+  height: 420px;
+  border: 1px solid darkgray;
+  border-radius: 10px;
+  background-color: white;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.item__wrap--skeleton {
+  width: 100%;
+  max-width: 240px;
+  height: 380px;
+  background: white;
+  position: relative;
+}
+
+.pfp__skeleton {
+  width: 50px;
+  height: 50px;
+  border-radius: 500px;
+  background-color: lightgray;
+  position: relative;
+}
+
+.fa-check {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: purple;
+  padding: 1px;
+  border-radius: 500px;
+  color: white;
+  background-color: #8264e2;
+}
+
+.countdown__skeleton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  max-width: 80px;
+  height: 16px;
+  background-color: lightgray;
+}
+
+.background__skeleton {
+  width: 100%;
+  max-width: 240px;
+  height: 200px;
+  background-color: lightgray;
+  position: absolute;
+  bottom: 92px;
+}
+
+.title__skeleton {
+  width: 100%;
+  max-width: 140px;
+  height: 14px;
+  background-color: lightgray;
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+}
+.price-likes__skeleton {
+  width: 100%;
+  max-width: 260px;
+  height: 14px;
+  background-color: lightgray;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+}
+
+.de_countdown {
+  display: flex;
 }
