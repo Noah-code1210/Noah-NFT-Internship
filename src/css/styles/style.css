@@ -16870,8 +16870,17 @@ img {
   left: 0;
 }
 
+.explore--skeleton {
+  margin: 0 24px 24px 8px;
+}
+
 .de_countdown {
   display: flex;
+}
+
+.d-item {
+  width: 100%;
+  max-width: 330px !important;
 }
 
 .TS__skeleton {
