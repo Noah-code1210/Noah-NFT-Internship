@@ -43,9 +43,7 @@ const HotCollections = () => {
           </div>
           <Slider {...settings}>
           {loading ? (
-            <div className="skeleton hotcollections--skeleton">
-
-            </div>
+            <div className="skeleton hotcollections--skeleton"></div>
           ) : (
             <>
                 {post.map((posts) => (
