@@ -42,11 +42,18 @@ const HotCollections = () => {
             </div>
           </div>
           <Slider {...settings}>
-          {loading ? (
-            <div className="skeleton hotcollections--skeleton"></div>
-          ) : (
-            <>
-                {post.map((posts) => (
+            {post.map((posts) => (
+              <>
+                {loading ? (
+                  <div className="hotcollections--skeleton">
+                    <div className="skeleton__bg--img"></div>
+                    <div className="skeleton__pfp--img">
+                      <i className="fa fa-check"></i>
+                    </div>
+                    <div className="skeleton__name--section"></div>
+                    <div className="skeleton__code--section"></div>
+                  </div>
+                ) : (
                   <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                     <div className="nft_coll">
                       <div className="nft_wrap">
@@ -76,9 +83,9 @@ const HotCollections = () => {
                       </div>
                     </div>
                   </div>
-                ))}
-            </>
-          )}
+                )}
+              </>
+            ))}
           </Slider>
         </div>
       </div>

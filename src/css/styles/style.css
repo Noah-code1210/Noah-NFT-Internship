@@ -16784,3 +16784,63 @@ img {
   bottom: 18px;
   left: 102px;
 }
+
+.hotcollections--skeleton {
+  width: 100%;
+  max-width: 292px;
+  height: 300px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  background-color: white;
+  margin-left: 14px;
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton__bg--img {
+  width: 100%;
+  max-width: 292px;
+  height: 160px;
+  background-color: lightgray;
+  position: absolute;
+  top: 0;
+}
+
+.skeleton__pfp--img {
+  width: 50px;
+  height: 50px;
+  border-radius: 500px;
+  position: absolute;
+  top: 170px;
+  left: 116px;
+  background-color: lightgray;
+}
+
+.fa-check {
+  background-color: #8364e2;
+  color: white;
+  border-radius: 500px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 1px;
+}
+
+.skeleton__name--section {
+  width: 100%;
+  max-width: 100px;
+  height: 14px;
+  position: absolute;
+  bottom: 46px;
+  left: 94px;
+  background-color: lightgray;
+}
+.skeleton__code--section {
+  width: 100%;
+  max-width: 76px;
+  height: 14px;
+  position: absolute;
+  bottom: 20px;
+  left: 106px;
+  background-color: lightgray;
+}

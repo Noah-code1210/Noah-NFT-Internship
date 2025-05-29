@@ -67,7 +67,7 @@ const ExploreItems = () => {
             </div>
           </div>
         </div>
-      ))}
+        ))}
       <div className="col-md-12 text-center">
         <Link to="" id="loadmore" className="btn-main lead">
           Load more
