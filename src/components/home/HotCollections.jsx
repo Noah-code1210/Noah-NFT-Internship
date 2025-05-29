@@ -39,22 +39,23 @@ const HotCollections = () => {
               <div className="small-border bg-color-2"></div>
             </div>
           </div>
-          {loading ? (
-            new Array(4).fill(0).map((element) => (
-                <div className="nft__coll--skeleton">
-                  <div className="nft__wrap--skeleton">
-                    <div className="nft__wrap--img--skeleton"></div>
-                    <div className="nft__coll--pp--skeleton"></div>
-                    <div className="nft__coll--name--skeleton"></div>
-                    <div className="nft__coll--code--skeleton"></div>
+          <Slider {...settings}>
+            {post.map((posts) => (
+              <>
+                {loading ? (
+                  <div className="hotcollections__skeleton">
+                    <div className="skeleton__bg"></div>
+                    <div className="skeleton__pfp">
+                    <i className="fa fa-check"></i>
+                    </div>
+                    <div className="skeleton__name"></div>
+                    <div className="skeleton__code"></div>
                   </div>
-                </div>
-            ))
-          ) : (
-            <>
-              <Slider {...settings}>
-                {post.map((posts) => (
-                  <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12" key={posts.id}>
+                ) : (
+                  <div
+                    className="col-lg-3 col-md-6 col-sm-6 col-xs-12"
+                    key={posts.id}
+                  >
                     <div className="nft_coll">
                       <div className="nft_wrap">
                         <Link to="/item-details">
@@ -83,10 +84,10 @@ const HotCollections = () => {
                       </div>
                     </div>
                   </div>
-                ))}
-              </Slider>
-            </>
-          )}
+                )}
+              </>
+            ))}
+          </Slider>
         </div>
       </div>
     </section>

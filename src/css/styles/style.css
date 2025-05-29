@@ -16725,6 +16725,12 @@ img {
   color: black !important;
   font-size: 30px !important;
 }
+.slick-prev:hover,
+.slick-next:hover,
+.slick-next:focus,
+.slick-prev:focus {
+  background: white !important;
+}
 
 .skeleton__wrapper {
   display: flex;
@@ -16902,4 +16908,56 @@ img {
   position: absolute;
   left: 70px;
   top: 30px;
+}
+
+.hotcollections__skeleton {
+  width: 100%;
+  max-width: 292px;
+  height: 300px;
+  position: relative;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  background-color: white;
+  margin-left: 14px;
+  overflow: hidden;
+}
+
+.skeleton__bg {
+  width: 100%;
+  max-width: 292px;
+  height: 160px;
+  position: absolute;
+  top: 0;
+  background-color: lightgray;
+}
+
+.skeleton__pfp {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 500px;
+  position: absolute;
+  top: 170px;
+  left: 122px;
+  background-color: lightgray;
+}
+
+.skeleton__name {
+  width: 100%;
+  max-width: 100px;
+  height: 14px;
+  position: absolute;
+  top: 240px;
+  left: 94px;
+  background-color: lightgray;
+}
+
+.skeleton__code {
+  width: 100%;
+  max-width: 70px;
+  height: 14px;
+  position: absolute;
+  top: 260px;
+  left: 110px;
+  background-color: lightgray;
 }
