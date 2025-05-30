@@ -6,14 +6,14 @@ import ItemDetails from "./pages/ItemDetails";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 
-function App() {
+function App({ authorId }) {
   return (
     <Router>
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/explore" element={<Explore />} />
-        <Route path="/author/:authorId" element={<Author />} />
+        <Route path={`/author/${authorId}`} element={<Author authorId={authorId}/>} />
         <Route path="/item-details" element={<ItemDetails />} />
       </Routes>
       <Footer />
