@@ -17,7 +17,7 @@ const HotCollections = () => {
       setPost(data);
       setTimeout(() => {
         setLoading(false);
-      }, 3000);
+      }, 2000);
     }
     fetchData();
   }, []);

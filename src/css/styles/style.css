@@ -16761,7 +16761,6 @@ img {
   max-width: 290px;
   height: 166px;
   background-color: darkgray;
-
 }
 
 .nft__coll--pp--skeleton {
@@ -16821,7 +16820,7 @@ img {
   position: relative;
 }
 
-.fa-check {
+.fa-check--header {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -16969,4 +16968,13 @@ img {
   top: 260px;
   left: 110px;
   background-color: lightgray;
+}
+
+.author-check {
+  position: absolute;
+  background-color: purple;
+  padding: 1px;
+  border-radius: 500px;
+  color: white;
+  background-color: #8264e2;
 }

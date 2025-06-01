@@ -26,7 +26,7 @@ const NewItems = () => {
       setPost(data);
       setTimeout(() => {
         setLoading(false);
-      }, 5000);
+      }, 3000);
     }
     fetchPost();
   }, []);

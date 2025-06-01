@@ -6,7 +6,7 @@ import AuthorImage from "../images/author_thumbnail.jpg";
 import axios from "axios";
 
 const Author = () => {
-  const { authorId } = useParams()
+  const { authorId } = useParams();
   const [post, setPost] = useState([]);
 
   useEffect(() => {
@@ -14,6 +14,7 @@ const Author = () => {
       const { data } = await axios.get(
         `https://us-central1-nft-cloud-functions.cloudfunctions.net/authors?author=${authorId}`
       );
+      console.log(data)
       setPost(data);
     }
     fetchPost();
@@ -29,44 +30,42 @@ const Author = () => {
           aria-label="section"
           className="text-light"
           data-bgimage="url(images/author_banner.jpg) top"
-          style={{ background: `url(${AuthorBanner}) top` }}
+          style={{ background: `url(${post.authorBanner}) top` }}
         ></section>
         <section aria-label="section">
           <div className="container">
             <div className="row">
-              {post.map((posts) => (
-                <div className="col-md-12">
-                  <div className="d_profile de-flex">
-                    <div className="de-flex-col">
-                      <div className="profile_avatar">
-                        <img src={posts.authorImage} alt="" />
+              <div className="col-md-12">
+                <div className="d_profile de-flex">
+                  <div className="de-flex-col">
+                    <div className="profile_avatar">
+                      <img src={post.authorImage} alt="" />
 
-                        <i className="fa fa-check"></i>
-                        <div className="profile_name">
-                          <h4>
-                            Monica Lucas
-                            <span className="profile_username">@monicaaaa</span>
-                            <span id="wallet" className="profile_wallet">
-                              UDHUHWudhwd78wdt7edb32uidbwyuidhg7wUHIFUHWewiqdj87dy7
-                            </span>
-                            <button id="btn_copy" title="Copy Text">
-                              Copy
-                            </button>
-                          </h4>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="profile_follow de-flex">
-                      <div className="de-flex-col">
-                        <div className="profile_follower">573 followers</div>
-                        <Link to="#" className="btn-main">
-                          Follow
-                        </Link>
+                      <i className="fa fa-check author-check"></i>
+                      <div className="profile_name">
+                        <h4>
+                         {post.authorName}
+                          <span className="profile_username">@{post.tag}</span>
+                          <span id="wallet" className="profile_wallet">
+                            {post.address}
+                          </span>
+                          <button id="btn_copy" title="Copy Text">
+                            Copy
+                          </button>
+                        </h4>
                       </div>
                     </div>
                   </div>
+                  <div className="profile_follow de-flex">
+                    <div className="de-flex-col">
+                      <div className="profile_follower">{post.followers} followers</div>
+                      <Link to="#" className="btn-main">
+                        Follow
+                      </Link>
+                    </div>
+                  </div>
                 </div>
-              ))}
+              </div>
 
               <div className="col-md-12">
                 <div className="de_tab tab_simple">

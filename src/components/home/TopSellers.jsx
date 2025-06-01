@@ -15,7 +15,7 @@ const TopSellers = () => {
       setPost(data);
       setTimeout(() => {
         setLoading(false);
-      }, 3000);
+      }, 4000);
     }
     fetchPost();
   });
