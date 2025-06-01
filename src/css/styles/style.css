@@ -13622,8 +13622,8 @@ a.read_more i {
 
 .nft__item {
   position: relative;
-  padding: 20px;
   border: solid 1px #ddd;
+  padding: 20px;
   border-radius: 15px;
   -moz-border-radius: 15px;
   -webkit-border-radius: 15px;
@@ -16720,6 +16720,11 @@ img {
   max-width: 400px;
 }
 
+.col-author {
+  width: 100%;
+  max-width: 330px;
+}
+
 .slick-prev:before,
 .slick-next:before {
   color: black !important;
@@ -16978,3 +16983,4 @@ img {
   color: white;
   background-color: #8264e2;
 }
+

@@ -30,7 +30,7 @@ const Author = () => {
           aria-label="section"
           className="text-light"
           data-bgimage="url(images/author_banner.jpg) top"
-          style={{ background: `url(${post.authorBanner}) top` }}
+          style={{ background: `url(${AuthorBanner}) top` }}
         ></section>
         <section aria-label="section">
           <div className="container">
