@@ -9,6 +9,13 @@ const Author = () => {
   const { authorId } = useParams();
   const [post, setPost] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [buttonText, setButtonText] = useState("Follow")
+  const [followCount, setFollowCount] = useState(['506'])
+
+  function buttonChange() {
+    setButtonText('Unfollow')
+    setFollowCount(post.followers + 1)
+  }
 
   useEffect(() => {
     async function fetchPost() {
@@ -80,17 +87,16 @@ const Author = () => {
                     <div className="profile_follow de-flex">
                       <div className="de-flex-col">
                         <div className="profile_follower">
-                          {post.followers} followers
+                          {followCount} followers
                         </div>
-                        <Link to="#" className="btn-main">
-                          Follow
-                        </Link>
+                        <button to="#" className="btn-main" onClick={buttonChange}>
+                          {buttonText}
+                        </button>
                       </div>
                     </div>
                   </div>
                 </div>
               )}
-
               <div className="col-md-12">
                 <div className="de_tab tab_simple">
                   <AuthorItems />
