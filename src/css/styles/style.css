@@ -20,7 +20,7 @@
 * {
   --body-font: "DM Sans", Helvetica, Arial, sans-serif;
   --title-font: "DM Sans", Helvetica, Arial, sans-serif;
-  
+
   /* ================================================== */
 }
 
@@ -17066,6 +17066,7 @@ img {
   left: 102px;
   background-color: lightgray;
 }
+
 .follow__btn {
   width: 100%;
   max-width: 120px;
@@ -17075,4 +17076,28 @@ img {
   top: 66px;
   right: 0;
   background-color: lightgray;
+}
+
+.authorItems__skeleton {
+  width: 100%;
+  max-width: 290px;
+  height: 420px;
+  border: 1px solid darkgray;
+  border-radius: 10px;
+  background-color: white;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.authorItems__pfp {
+  width: 50px;
+  height: 50px;
+  border-radius: 500px;
+  background-color: lightgray;
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
