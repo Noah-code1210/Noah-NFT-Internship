@@ -20,9 +20,9 @@
 * {
   --body-font: "DM Sans", Helvetica, Arial, sans-serif;
   --title-font: "DM Sans", Helvetica, Arial, sans-serif;
-}
 
-/* ================================================== */
+  /* ================================================== */
+}
 
 /* body */
 
@@ -13622,8 +13622,8 @@ a.read_more i {
 
 .nft__item {
   position: relative;
-  padding: 20px;
   border: solid 1px #ddd;
+  padding: 20px;
   border-radius: 15px;
   -moz-border-radius: 15px;
   -webkit-border-radius: 15px;
@@ -16720,6 +16720,11 @@ img {
   max-width: 400px;
 }
 
+.col-author {
+  width: 100%;
+  max-width: 330px;
+}
+
 .slick-prev:before,
 .slick-next:before {
   color: black !important;
@@ -16761,7 +16766,6 @@ img {
   max-width: 290px;
   height: 166px;
   background-color: darkgray;
-
 }
 
 .nft__coll--pp--skeleton {
@@ -16821,7 +16825,7 @@ img {
   position: relative;
 }
 
-.fa-check {
+.fa-check--header {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -16969,4 +16973,131 @@ img {
   top: 260px;
   left: 110px;
   background-color: lightgray;
+}
+
+.author-check {
+  position: absolute;
+  background-color: purple;
+  padding: 1px;
+  border-radius: 500px;
+  color: white;
+  background-color: #8264e2;
+}
+
+.author__skeleton {
+  width: 100%;
+  max-width: 1400px;
+  height: 180px;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.author__pfp--wrapper {
+  width: 100%;
+  max-width: 400px;
+  height: 180px;
+  position: relative;
+  background-color: white;
+}
+
+.author__pfp {
+  width: 160px;
+  height: 160px;
+  border-radius: 500px;
+  border: none;
+  margin-top: 10px;
+  background-color: lightgray;
+  position: relative;
+}
+.skeleton__author--check {
+  position: absolute;
+  border-radius: 500px;
+  color: white;
+  font-size: 14px;
+  padding: 12px;
+  bottom: 0;
+  right: 0;
+  background-color: #8364e2;
+}
+
+.author__name {
+  width: 100%;
+  max-width: 220px;
+  height: 22px;
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  background-color: lightgray;
+}
+.author__tag {
+  width: 100%;
+  max-width: 120px;
+  height: 22px;
+  position: absolute;
+  top: 74px;
+  right: 110px;
+  background-color: lightgray;
+}
+.author__address {
+  width: 100%;
+  max-width: 220px;
+  height: 22px;
+  position: absolute;
+  top: 106px;
+  right: 10px;
+  background-color: lightgray;
+}
+
+.author__followers--wrapper {
+  width: 100%;
+  max-width: 360px;
+  height: 180px;
+  position: relative;
+  background-color: white;
+}
+
+.follower__count {
+  width: 100%;
+  max-width: 120px;
+  height: 22px;
+  position: absolute;
+  top: 78px;
+  left: 102px;
+  background-color: lightgray;
+}
+
+.follow__btn {
+  width: 100%;
+  max-width: 120px;
+  height: 46px;
+  border-radius: 8px;
+  position: absolute;
+  top: 66px;
+  right: 0;
+  background-color: lightgray;
+}
+
+.authorItems__skeleton {
+  width: 100%;
+  max-width: 290px;
+  height: 420px;
+  border: 1px solid darkgray;
+  border-radius: 10px;
+  background-color: white;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.authorItems__pfp {
+  width: 50px;
+  height: 50px;
+  border-radius: 500px;
+  background-color: lightgray;
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
