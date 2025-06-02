@@ -20,9 +20,9 @@
 * {
   --body-font: "DM Sans", Helvetica, Arial, sans-serif;
   --title-font: "DM Sans", Helvetica, Arial, sans-serif;
+  
+  /* ================================================== */
 }
-
-/* ================================================== */
 
 /* body */
 
@@ -16984,3 +16984,95 @@ img {
   background-color: #8264e2;
 }
 
+.author__skeleton {
+  width: 100%;
+  max-width: 1400px;
+  height: 180px;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.author__pfp--wrapper {
+  width: 100%;
+  max-width: 400px;
+  height: 180px;
+  position: relative;
+  background-color: white;
+}
+
+.author__pfp {
+  width: 160px;
+  height: 160px;
+  border-radius: 500px;
+  border: none;
+  margin-top: 10px;
+  background-color: lightgray;
+  position: relative;
+}
+.skeleton__author--check {
+  position: absolute;
+  border-radius: 500px;
+  color: white;
+  font-size: 14px;
+  padding: 12px;
+  bottom: 0;
+  right: 0;
+  background-color: #8364e2;
+}
+
+.author__name {
+  width: 100%;
+  max-width: 220px;
+  height: 22px;
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  background-color: lightgray;
+}
+.author__tag {
+  width: 100%;
+  max-width: 120px;
+  height: 22px;
+  position: absolute;
+  top: 74px;
+  right: 110px;
+  background-color: lightgray;
+}
+.author__address {
+  width: 100%;
+  max-width: 220px;
+  height: 22px;
+  position: absolute;
+  top: 106px;
+  right: 10px;
+  background-color: lightgray;
+}
+
+.author__followers--wrapper {
+  width: 100%;
+  max-width: 360px;
+  height: 180px;
+  position: relative;
+  background-color: white;
+}
+
+.follower__count {
+  width: 100%;
+  max-width: 120px;
+  height: 22px;
+  position: absolute;
+  top: 78px;
+  left: 102px;
+  background-color: lightgray;
+}
+.follow__btn {
+  width: 100%;
+  max-width: 120px;
+  height: 46px;
+  border-radius: 8px;
+  position: absolute;
+  top: 66px;
+  right: 0;
+  background-color: lightgray;
+}

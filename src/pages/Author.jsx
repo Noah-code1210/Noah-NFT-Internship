@@ -8,14 +8,17 @@ import axios from "axios";
 const Author = () => {
   const { authorId } = useParams();
   const [post, setPost] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function fetchPost() {
       const { data } = await axios.get(
         `https://us-central1-nft-cloud-functions.cloudfunctions.net/authors?author=${authorId}`
       );
-      console.log(data)
       setPost(data);
+      setTimeout(() => {
+        setLoading(false);
+      }, 2000);
     }
     fetchPost();
   }, []);
@@ -35,37 +38,58 @@ const Author = () => {
         <section aria-label="section">
           <div className="container">
             <div className="row">
-              <div className="col-md-12">
-                <div className="d_profile de-flex">
-                  <div className="de-flex-col">
-                    <div className="profile_avatar">
-                      <img src={post.authorImage} alt="" />
+              {loading ? (
+                <div className="author__skeleton">
+                  <div className="author__pfp--wrapper">
+                    <div className="author__pfp">
+                      <i className="fa fa-check skeleton__author--check"></i>
+                    </div>
+                    <div className="author__name"></div>
+                    <div className="author__tag"></div>
+                    <div className="author__address"></div>
+                  </div>
+                  <div className="author__followers--wrapper">
+                    <div className="follower__count"></div>
+                    <div className="follow__btn"></div>
+                  </div>
+                </div>
+              ) : (
+                <div className="col-md-12">
+                  <div className="d_profile de-flex">
+                    <div className="de-flex-col">
+                      <div className="profile_avatar">
+                        <img src={post.authorImage} alt="" />
 
-                      <i className="fa fa-check author-check"></i>
-                      <div className="profile_name">
-                        <h4>
-                         {post.authorName}
-                          <span className="profile_username">@{post.tag}</span>
-                          <span id="wallet" className="profile_wallet">
-                            {post.address}
-                          </span>
-                          <button id="btn_copy" title="Copy Text">
-                            Copy
-                          </button>
-                        </h4>
+                        <i className="fa fa-check author-check"></i>
+                        <div className="profile_name">
+                          <h4>
+                            {post.authorName}
+                            <span className="profile_username">
+                              @{post.tag}
+                            </span>
+                            <span id="wallet" className="profile_wallet">
+                              {post.address}
+                            </span>
+                            <button id="btn_copy" title="Copy Text">
+                              Copy
+                            </button>
+                          </h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="profile_follow de-flex">
+                      <div className="de-flex-col">
+                        <div className="profile_follower">
+                          {post.followers} followers
+                        </div>
+                        <Link to="#" className="btn-main">
+                          Follow
+                        </Link>
                       </div>
                     </div>
                   </div>
-                  <div className="profile_follow de-flex">
-                    <div className="de-flex-col">
-                      <div className="profile_follower">{post.followers} followers</div>
-                      <Link to="#" className="btn-main">
-                        Follow
-                      </Link>
-                    </div>
-                  </div>
                 </div>
-              </div>
+              )}
 
               <div className="col-md-12">
                 <div className="de_tab tab_simple">
