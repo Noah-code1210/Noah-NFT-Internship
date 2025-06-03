@@ -50,8 +50,14 @@ const NewItems = () => {
         <div className="row">
           <div className="col-lg-12">
             <div className="text-center">
-              <h2>New Items</h2>
-              <div className="small-border bg-color-2"></div>
+              <h2 data-aos="fade-up" data-aos-duration="1000">
+                New Items
+              </h2>
+              <div
+                className="small-border bg-color-2"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+              ></div>
             </div>
           </div>
           <Slider {...settings}>
@@ -70,7 +76,11 @@ const NewItems = () => {
                     </div>
                   </div>
                 ) : (
-                  <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                  <div
+                    className="col-lg-3 col-md-6 col-sm-6 col-xs-12"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                  >
                     <div className="nft__item">
                       <div className="author_list_pp">
                         <Link
