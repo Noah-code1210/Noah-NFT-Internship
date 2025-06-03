@@ -36,9 +36,7 @@ const ExploreItems = ({ authorId }) => {
         `https://us-central1-nft-cloud-functions.cloudfunctions.net/explore`
       );
       setPost(data);
-      setTimeout(() => {
-        setLoading(false);
-      }, 3000);
+      setLoading(false);
     }
     fetchPost();
   }, []);
@@ -148,4 +146,3 @@ const ExploreItems = ({ authorId }) => {
 };
 
 export default ExploreItems;
-

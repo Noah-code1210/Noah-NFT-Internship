@@ -16,9 +16,7 @@ const AuthorItems = () => {
       );
       setPost(data);
       setInfo(data.nftCollection);
-      setTimeout(() => {
-        setLoading(false);
-      }, 2500);
+      setLoading(false);
     }
     fetchUserInfo();
   }, []);
@@ -31,7 +29,7 @@ const AuthorItems = () => {
             {info.slice(0, 8).map((posts) => (
               <>
                 {loading ? (
-                 <AuthorItemsLoading />
+                  <AuthorItemsLoading />
                 ) : (
                   <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12 col-author">
                     <div className="nft__item">

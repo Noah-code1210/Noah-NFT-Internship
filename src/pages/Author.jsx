@@ -9,16 +9,16 @@ const Author = () => {
   const { authorId } = useParams();
   const [post, setPost] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [buttonText, setButtonText] = useState("Follow")
-  const [followCount, setFollowCount] = useState(0)
+  const [buttonText, setButtonText] = useState("Follow");
+  const [followCount, setFollowCount] = useState(0);
 
   function buttonChange() {
     if (buttonText === "Follow") {
-      setButtonText('Unfollow')
-      setFollowCount(prev => prev + 1)
+      setButtonText("Unfollow");
+      setFollowCount((prev) => prev + 1);
     } else {
-      setButtonText("Follow")
-      setFollowCount(prev => prev - 1)
+      setButtonText("Follow");
+      setFollowCount((prev) => prev - 1);
     }
   }
 
@@ -28,10 +28,8 @@ const Author = () => {
         `https://us-central1-nft-cloud-functions.cloudfunctions.net/authors?author=${authorId}`
       );
       setPost(data);
-      setFollowCount(data.followers)
-      setTimeout(() => {
-        setLoading(false);
-      }, 2000);
+      setFollowCount(data.followers);
+      setLoading(false);
     }
     fetchPost();
   }, []);
@@ -95,7 +93,11 @@ const Author = () => {
                         <div className="profile_follower">
                           {followCount} followers
                         </div>
-                        <button to="#" className="btn-main" onClick={buttonChange}>
+                        <button
+                          to="#"
+                          className="btn-main"
+                          onClick={buttonChange}
+                        >
                           {buttonText}
                         </button>
                       </div>

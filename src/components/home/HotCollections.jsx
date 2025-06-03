@@ -15,9 +15,7 @@ const HotCollections = () => {
         "https://us-central1-nft-cloud-functions.cloudfunctions.net/hotCollections"
       );
       setPost(data);
-      setTimeout(() => {
-        setLoading(false);
-      }, 2000);
+      setLoading(false);
     }
     fetchData();
   }, []);
@@ -46,7 +44,7 @@ const HotCollections = () => {
                   <div className="hotcollections__skeleton">
                     <div className="skeleton__bg"></div>
                     <div className="skeleton__pfp">
-                    <i className="fa fa-check"></i>
+                      <i className="fa fa-check"></i>
                     </div>
                     <div className="skeleton__name"></div>
                     <div className="skeleton__code"></div>

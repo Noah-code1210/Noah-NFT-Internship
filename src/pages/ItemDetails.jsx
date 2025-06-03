@@ -15,10 +15,9 @@ const ItemDetails = () => {
       const { data } = await axios.get(
         `https://us-central1-nft-cloud-functions.cloudfunctions.net/itemDetails?nftId=${nftId}`
       );
+      console.log(data)
       setPost(data);
-      setTimeout(() => {
-        setLoading(false);
-      }, 2000);
+      setLoading(false);
     }
     fetchPost();
   }, []);
@@ -85,7 +84,7 @@ const ItemDetails = () => {
                           <h6>Owner</h6>
                           <div className="item_author">
                             <div className="author_list_pp">
-                              <Link to={`author/${post.authorId}`}>
+                              <Link to={`/author/${post.ownerId}`}>
                                 <img
                                   className="lazy"
                                   src={post.ownerImage}
@@ -95,7 +94,7 @@ const ItemDetails = () => {
                               </Link>
                             </div>
                             <div className="author_list_info">
-                              <Link to={`author/${post.authorId}`}>
+                              <Link to={`/author/${post.ownerId}`}>
                                 {post.ownerName}
                               </Link>
                             </div>
@@ -108,7 +107,7 @@ const ItemDetails = () => {
                           <h6>Creator</h6>
                           <div className="item_author">
                             <div className="author_list_pp">
-                              <Link to={`author/${post.authorId}`}>
+                              <Link to={`/author/${post.creatorId}`}>
                                 <img
                                   className="lazy"
                                   src={post.creatorImage}
@@ -118,7 +117,7 @@ const ItemDetails = () => {
                               </Link>
                             </div>
                             <div className="author_list_info">
-                              <Link to={`author/${post.authorId}`}>
+                              <Link to={`/author/${post.creatorId}`}>
                                 {post.creatorName}
                               </Link>
                             </div>
