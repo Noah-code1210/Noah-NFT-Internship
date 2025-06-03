@@ -16,9 +16,7 @@ const AuthorItems = () => {
       );
       setPost(data);
       setInfo(data.nftCollection);
-      setTimeout(() => {
-        setLoading(false);
-      }, 2500);
+      setLoading(false);
     }
     fetchUserInfo();
   }, []);
@@ -31,7 +29,7 @@ const AuthorItems = () => {
             {info.slice(0, 8).map((posts) => (
               <>
                 {loading ? (
-                 <AuthorItemsLoading />
+                  <AuthorItemsLoading />
                 ) : (
                   <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12 col-author">
                     <div className="nft__item">
@@ -59,7 +57,7 @@ const AuthorItems = () => {
                             </div>
                           </div>
                         </div>
-                        <Link to="/item-details">
+                        <Link to={`/item-details/${posts.nftId}`}>
                           <img
                             src={posts.nftImage}
                             className="lazy nft__item_preview"
@@ -68,7 +66,7 @@ const AuthorItems = () => {
                         </Link>
                       </div>
                       <div className="nft__item_info">
-                        <Link to="/item-details">
+                        <Link to="/item-details/">
                           <h4>{post.authorName}</h4>
                         </Link>
                         <div className="nft__item_price">{posts.price} ETH</div>

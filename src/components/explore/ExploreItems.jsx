@@ -36,9 +36,7 @@ const ExploreItems = ({ authorId }) => {
         `https://us-central1-nft-cloud-functions.cloudfunctions.net/explore`
       );
       setPost(data);
-      setTimeout(() => {
-        setLoading(false);
-      }, 3000);
+      setLoading(false);
     }
     fetchPost();
   }, []);
@@ -110,7 +108,7 @@ const ExploreItems = ({ authorId }) => {
                       </div>
                     </div>
                   </div>
-                  <Link to="/item-details">
+                  <Link to={`/item-details/${posts.nftId}`}>
                     <img
                       src={posts.nftImage}
                       className="lazy nft__item_preview"
@@ -119,7 +117,7 @@ const ExploreItems = ({ authorId }) => {
                   </Link>
                 </div>
                 <div className="nft__item_info">
-                  <Link to="/item-details">
+                  <Link to={`/item-details/${posts.nftId}`}>
                     <h4>{posts.title}</h4>
                   </Link>
                   <div className="nft__item_price">{posts.price} ETH</div>
@@ -148,4 +146,3 @@ const ExploreItems = ({ authorId }) => {
 };
 
 export default ExploreItems;
-
